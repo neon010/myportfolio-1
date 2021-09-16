@@ -12,11 +12,12 @@
     --section-title-color: #0f9dc7;
     --link-color: #0f9dc7;
     --gradient-primary-color: #283c86;
-    --gradient-secondary-color: #73a374;
+    --gradient-secondary-color: #15588f;
 
 }
 html{
     font-size: 20px;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -26,14 +27,17 @@ body {
     color: var(--primary-text-color);
     width: 100%;
     height: 100%;
+    scroll-behavior: smooth;
 }
 
 body::-webkit-scrollbar {
     width: 5px;
+    scroll-behavior: smooth;
 }
    
 body::-webkit-scrollbar-track {
     background: transparent;
+    scroll-behavior: smooth;
 }
    
 body::-webkit-scrollbar-thumb {
@@ -98,8 +102,12 @@ main{
     width: 100%;
     /* outline: 1px solid green; */
     margin: 1rem 3rem 1rem 3rem;
+
+}
+
+#move{
     animation-name: slide-to-left;
-    animation-duration: 2s;
+    animation-duration: 3s;
 }
 
 .section-title{
@@ -210,16 +218,19 @@ main{
 .card-content{
     margin: 1rem 0 1rem 0;
     width: 100%;
-    padding: 1rem;
     border: 3px solid transparent;
     border-image: linear-gradient(35deg, var(--gradient-primary-color), var(--gradient-secondary-color));
     border-image-slice: 1; 
     border-radius: 5px;
 }
+.card{
+    padding: 1rem;
+}
 
 .active-card{
+
     animation-name: fill-left;
-    animation-duration: 1s;
+    animation-duration: 2s;
     height: 100%;
 }
 .card-header{
@@ -348,6 +359,9 @@ footer{
     }
     .section-content{
         margin: 0;
+    }
+    .right-section{
+        padding: 0;
     }
     .about-me-container{
         flex-direction: column;
